@@ -31,7 +31,7 @@ export class Proveedor {
     }
 
     getInfoProveedor(){
-        return `Nombre: ${this.#nombre}, Teléfono: ${this.getTelefono}`;
+        return `Nombre: ${this.#nombre}, Teléfono: ${this.#articulo.getTelefono()}`;
     }
 }
 
