@@ -33,6 +33,10 @@ export class Proveedor {
     getInfoProveedor(){
         return `Nombre: ${this.#nombre}, Teléfono: ${this.#articulo.getTelefono()}`;
     }
+
+    mostrarInfoProveedor() {
+        return `Nombre: ${this.#nombre}, Articulo: ${this.#articulo}, Precio: ${this.#precio}`;
+    }
 }
 
 //Clase articulo
@@ -66,5 +70,9 @@ export class Articulo {
     }
     setTelefono(telefono){
         this.#telefono = telefono;
+    }
+
+    mostrarInfoArticulo() {
+        return `Nombre: ${this.#name}, Email: ${this.#email}, Cargo: ${this.#telefono}`;
     }
 }
