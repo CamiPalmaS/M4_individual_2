@@ -1,12 +1,15 @@
 export class Proveedor {
     #nombre;
     #articulo;
-    #precio;
+    #email;
+    #telefono;
 
-    constructor (nombre, articulo, precio){
+
+    constructor (nombre, articulo, email, telefono){
         this.#nombre = nombre;
         this.#articulo = articulo;
-        this.#precio = precio;
+        this.#email = email;
+        this.#telefono = telefono;
     }
 
     getNombre(){
@@ -23,41 +26,6 @@ export class Proveedor {
         this.#articulo = articulo
     }
 
-    getPrecio(){
-        return this.#precio;
-    }
-    setPrecio(precio){
-        this.#precio = precio
-    }
-
-    getInfoProveedor(){
-        return `Nombre: ${this.#nombre}, Teléfono: ${this.#articulo.getTelefono()}`;
-    }
-
-    mostrarInfoProveedor() {
-        return `Nombre: ${this.#nombre}, Articulo: ${this.#articulo}, Precio: ${this.#precio}`;
-    }
-}
-
-//Clase articulo
-export class Articulo {
-    #name;
-    #email;
-    #telefono;
-
-    constructor(name, email, telefono){
-        this.#name = name;
-        this.#email = email;
-        this.#telefono = telefono;
-    }
-
-    getName(){
-        return this.#name;
-    }
-    setName(name){
-        this.#name = name;
-    }
-
     getEmail(){
         return this.#email;
     }
@@ -72,7 +40,40 @@ export class Articulo {
         this.#telefono = telefono;
     }
 
+    getInfoProveedor(){
+        return `Nombre: ${this.#nombre}, Teléfono: ${this.#telefono}`;
+    }
+
+    mostrarInfoProveedor() {
+        return `Nombre: ${this.#nombre}, Articulo: ${this.#articulo}, Teléfono: ${this.#telefono}, Email: ${this.#email}`;
+    }
+}
+
+//Clase articulo
+export class Articulo {
+    #name;
+    #precio;
+
+    constructor(name, precio){
+        this.#name = name;
+        this.#precio = precio;
+    }
+
+    getName(){
+        return this.#name;
+    }
+    setName(name){
+        this.#name = name;
+    }
+
+    getPrecio(){
+        return this.#precio;
+    }
+    setPrecio(precio){
+        this.#precio = precio
+    }
+
     mostrarInfoArticulo() {
-        return `Nombre: ${this.#name}, Email: ${this.#email}, Cargo: ${this.#telefono}`;
+        return `Nombre: ${this.#name}, Precio: ${this.#precio}`;
     }
 }
