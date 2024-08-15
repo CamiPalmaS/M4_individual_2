@@ -4,7 +4,6 @@ export class Proveedor {
     #email;
     #telefono;
 
-
     constructor (nombre, articulo, email, telefono){
         this.#nombre = nombre;
         this.#articulo = articulo;
