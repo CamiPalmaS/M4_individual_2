@@ -41,8 +41,8 @@ document.getElementById('formProveedor').addEventListener('submit', (event) => {
         return;
     }
     //crear los objetos articulo y proveedor 
-    const nuevoArticulo = new Articulo(nombreArticulo, emailArticulo, telefonoArticulo);
-    const nuevoProveedor = new Proveedor(nombreProveedor, nuevoArticulo, precio);
+    const nuevoArticulo = new Articulo(nombreArticulo, precio);
+    const nuevoProveedor = new Proveedor(nombreProveedor, nuevoArticulo, emailArticulo, telefonoArticulo);
 
     console.log(nuevoArticulo.mostrarInfoArticulo());
     console.log(nuevoProveedor.mostrarInfoProveedor());
