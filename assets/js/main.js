@@ -47,14 +47,20 @@ document.getElementById('formProveedor').addEventListener('submit', (event) => {
     console.log(nuevoArticulo.mostrarInfoArticulo());
     console.log(nuevoProveedor.mostrarInfoProveedor());
 
-    
+    alert("El IVA (19%) del articulo es: " + calculoImpuesto(nuevoArticulo));
     resetFormulario();
 
     
 });
-
+//para limpiar los campos del formulario
 function resetFormulario(){
     document.getElementById("errorFormulario").textContent = "";
     document.getElementById("formProveedor").reset();
 }
 
+//funcion para calcular el impuesto, se pasa el articulo porque precio es un atributo de este (no proveedor como dice el pdf)
+function calculoImpuesto(articulo){
+    const tasa = 0.19;
+    const monto = articulo.getPrecio();//usa metodo de articulo para obtener precio
+    return tasa*monto;
+}
