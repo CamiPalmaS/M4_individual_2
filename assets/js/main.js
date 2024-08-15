@@ -2,10 +2,12 @@
 import { Proveedor, Articulo } from "./clases.js";
 
 
-const verduras = new Articulo("Paltas", "mariaverduras@gmail.com", "+5699999")
-const verduleria = new Proveedor("Verduleria Maria", verduras, 50000)
+const verduras = new Articulo("Paltas", 50000);
+const verduleria = new Proveedor("Verduleria Maria", verduras, "mariaverduras@gmail.com", "+5699999");
 
-console.log(verduleria.getInfoProveedor())
+console.log(verduleria.getInfoProveedor());
+console.log(verduras.mostrarInfoArticulo());
+console.log(verduleria.mostrarInfoProveedor());
 
 document.getElementById('formProveedor').addEventListener('submit', (event) => {
     event.preventDefault();

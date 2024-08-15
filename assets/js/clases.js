@@ -41,11 +41,11 @@ export class Proveedor {
     }
 
     getInfoProveedor(){
-        return `Nombre: ${this.#nombre}, Teléfono: ${this.#telefono}`;
+        return `Nombre: ${this.#nombre}, Teléfono: ${this.getTelefono()}`;
     }
 
     mostrarInfoProveedor() {
-        return `Nombre: ${this.#nombre}, Articulo: ${this.#articulo}, Teléfono: ${this.#telefono}, Email: ${this.#email}`;
+        return `Nombre: ${this.#nombre}, Teléfono: ${this.#telefono}, Email: ${this.#email}, Especificación del Articulo: ${this.#articulo.mostrarInfoArticulo()}`;
     }
 }
 
