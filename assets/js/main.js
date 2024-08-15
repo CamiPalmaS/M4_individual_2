@@ -59,8 +59,4 @@ function resetFormulario(){
 }
 
 //funcion para calcular el impuesto, se pasa el articulo porque precio es un atributo de este (no proveedor como dice el pdf)
-function calculoImpuesto(articulo){
-    const tasa = 0.19;
-    const monto = articulo.getPrecio();//usa metodo de articulo para obtener precio
-    return tasa*monto;
-}
+const calculoImpuesto = (articulo) => 0.19 * articulo.getPrecio(); //se escribe como funcion flecha
